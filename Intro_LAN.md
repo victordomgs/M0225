@@ -97,3 +97,13 @@ En aquest cas, necessitarem dos **cables directes (Copper Straight-Through)** pe
 - El PC5 el connectem a través de la interfície Fa0/1, li afegim la IP 192.168.1.15 i la porta d'enllaç 192.168.1.1. Com que la submàscara és 255.255.255.0. Aquesta màquina es troba a la xarxa 192.168.1.
 
 Molt important, desprès configurem la IP de cada interfície corresponent del router amb la porta d'enllaç definida en cada una de les xarxes. D'aquesta manera cada PC pertany a una d’aquestes xarxes i utilitza la IP del router dins la seva xarxa com a **porta d’enllaç**.
+
+## Exemple 5 — Connexió entre dos Routers
+
+Anem a entendre com dos routers poden connectar diferents xarxes i permetre la comunicació entre ordinadors de subxarxes separades mitjançant **rutes estàtiques**.
+
+#### Lògica de xarxa al darrere
+
+- Cada router connecta **dues xarxes diferents**: una local (LAN) i una de connexió entre routers (WAN).
+- Perquè les dades arribin a la destinació correcta, cada router ha de saber **què hi ha a l’altra banda**.
+- Aquesta informació s’afegeix amb **rutes estàtiques** que indiquen: “Per arribar a la xarxa X, envia els paquets a través de la IP Y”.
