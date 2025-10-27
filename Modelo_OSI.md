@@ -5,6 +5,7 @@ Quan parlem de xarxes d’ordinadors, diferents dispositius (ordinadors, routers
 Als anys 70 i 80, cada fabricant utilitzava els seus propis protocols, cosa que feia molt difícil la comunicació entre sistemes. Per resoldre aquest problema, la **ISO (International Organization for Standardization)** va crear el **model OSI (Open Systems Interconnection)**.
 
 Aquest model proposa una manera **estàndard d’organitzar la comunicació** entre dispositius dividint-la en **set capes**, cadascuna amb una funció concreta.  
+
 Així, cada fabricant pot dissenyar els seus dispositius o programes seguint les mateixes regles i garantir que **tots els sistemes siguin compatibles**.
 
 En resum, el model OSI és com un **llenguatge comú** que permet que qualsevol ordinador pugui “parlar” amb qualsevol altre.
@@ -14,9 +15,11 @@ En resum, el model OSI és com un **llenguatge comú** que permet que qualsevol 
 # 2. Què és el model OSI
 
 El **model OSI** és una manera d’entendre com es comuniquen dos dispositius dins d’una xarxa.  
+
 Imagina que és com una **cadena de set passos**, on cada pas (o capa) s’encarrega d’una part del procés de comunicació.
 
 Cada capa té una **funció específica** i només es comunica amb la capa que té just a sobre i la que té just a sota.  
+
 Això vol dir que una capa no necessita saber com treballen les altres, només ha d’entendre com parlar amb les seves “veïnes”.
 
 Per exemple, quan **enviem un fitxer a un altre ordinador**, aquest fitxer:
@@ -30,7 +33,8 @@ Aquest sistema de capes permet **entendre, dissenyar i solucionar problemes de x
 
 # 3. Les set capes del model OSI
 
-El model OSI divideix la comunicació de xarxa en **set capes**.  
+El model OSI divideix la comunicació de xarxa en **set capes**. 
+
 Cada capa té una **funció específica** i treballa conjuntament amb les altres per permetre que la informació viatgi des de l’aplicació d’un usuari fins al dispositiu destinatari.
 
 | Nº | Nom de la capa            | Funció principal                                                                 | Tipus de dades (PDU) | Dispositius o protocols associats |
@@ -44,6 +48,7 @@ Cada capa té una **funció específica** i treballa conjuntament amb les altres
 | 1  | **Física**                 | Converteix les dades en senyals elèctrics, òptics o de ràdio i transmet bits.   | Bits                 | Cables, connectors, hubs, repetidors |
 
 Cada capa depèn de la capa inferior per transmetre la informació i ofereix serveis a la capa superior.  
+
 Aquesta organització facilita la **compatibilitat entre dispositius i protocols** de diferents fabricants.
 
   <div style="text-align: center;">
@@ -170,7 +175,8 @@ Cables, connectors, repetidors, hubs, targetes de xarxa (NIC).
 
 # 5. Unitats d’informació (PDU)
 
-Quan les dades passen per les diferents capes del model OSI, **canvien de forma i de nom**.  
+Quan les dades passen per les diferents capes del model OSI, **canvien de forma i de nom**. 
+
 Cada capa afegeix o treu informació (com adreces o codis de control) i tracta les dades com una **unitat pròpia**, anomenada **PDU** (*Protocol Data Unit*).
 
 | Nº | Capa del model OSI       | Nom de la unitat d’informació (PDU) | Descripció breu |
@@ -184,8 +190,8 @@ Cada capa afegeix o treu informació (com adreces o codis de control) i tracta l
 | 1  | **Física**                | Bits                                | Senyals elèctrics, òptics o de ràdio que viatgen pel mitjà físic. |
 
 Podem imaginar aquest procés com una **cadena d’embalatges**:  
-cada capa afegeix una “caixa” o “etiqueta” al missatge perquè sàpiga com i on ha d’arribar.  
-Quan arriba al destí, les capes les van traient una per una fins que l’usuari rep les dades originals.
+- Cada capa afegeix una “caixa” o “etiqueta” al missatge perquè sàpiga com i on ha d’arribar.  
+- Quan arriba al destí, les capes les van traient una per una fins que l’usuari rep les dades originals.
 
   <div style="text-align: center;">
     <img src="https://github.com/victordomgs/M0225/blob/main/images/Image9.png" width="750" height="auto"/>
@@ -194,6 +200,7 @@ Quan arriba al destí, les capes les van traient una per una fins que l’usuari
 # 6. Implementació en dispositius
 
 No tots els dispositius de xarxa treballen amb totes les capes del model OSI.  
+
 Cada tipus de dispositiu implementa només aquelles capes que necessita per realitzar la seva funció.
 
 | Dispositiu | Capa o capes que implementa | Explicació breu |
