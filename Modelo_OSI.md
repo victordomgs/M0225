@@ -226,7 +226,7 @@ D’aquell projecte va néixer el **model TCP/IP**, que es basa en dos protocols
 Tot i que el model OSI és molt útil per entendre com funciona una xarxa, **Internet utilitza realment el model TCP/IP**, perquè és més senzill i pràctic per implementar.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image10.png" width="750" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image10.png" width="550" height="auto"/>
   </div>
 
 ## Correspondència entre el model OSI i el model TCP/IP
@@ -235,7 +235,7 @@ El model TCP/IP té **4 capes**, que agrupen les 7 del model OSI.
 A la taula següent pots veure com es corresponen:
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image11.jpg" width="750" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image11.jpg" width="1200" height="auto"/>
   </div>
 
 
