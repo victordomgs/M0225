@@ -163,7 +163,7 @@ Cables, connectors, repetidors, hubs, targetes de xarxa (NIC).
 
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image8.png" width="750" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image8.png" width="1200" height="auto"/>
   </div>
 
 <br>
