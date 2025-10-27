@@ -166,6 +166,7 @@ Quan envies un missatge per WhatsApp, finalment la informació es converteix en 
 **Dispositius:**  
 Cables, connectors, repetidors, hubs, targetes de xarxa (NIC).
 
+<br>
 
   <div style="text-align: center;">
     <img src="https://github.com/victordomgs/M0225/blob/main/images/Image8.png" width="1200" height="auto"/>
@@ -213,3 +214,35 @@ Cada tipus de dispositiu implementa només aquelles capes que necessita per real
 💡 **Recorda:**  
 Com més amunt treballa un dispositiu dins del model OSI, **més “intel·ligent”** és, ja que pot entendre més informació sobre el contingut i la destinació de les dades.
 
+# 7. El model TCP/IP
+
+## Introducció històrica
+
+Abans que s’estandarditzés el model OSI, el Departament de Defensa dels Estats Units va desenvolupar un altre model per a la seva pròpia xarxa: **ARPANET**, considerada l’origen d’Internet.  
+D’aquell projecte va néixer el **model TCP/IP**, que es basa en dos protocols principals:
+- **TCP (Transmission Control Protocol)** → garanteix que les dades arribin correctament.
+- **IP (Internet Protocol)** → s’encarrega d’encaminar-les fins al destí correcte.
+
+Tot i que el model OSI és molt útil per entendre com funciona una xarxa, **Internet utilitza realment el model TCP/IP**, perquè és més senzill i pràctic per implementar.
+
+  <div style="text-align: center;">
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image10.png" width="750" height="auto"/>
+  </div>
+
+## Correspondència entre el model OSI i el model TCP/IP
+
+El model TCP/IP té **4 capes**, que agrupen les 7 del model OSI.  
+A la taula següent pots veure com es corresponen:
+
+  <div style="text-align: center;">
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image11.jpg" width="750" height="auto"/>
+  </div>
+
+
+## Per què s’utilitza actualment el model TCP/IP
+
+- És **més pràctic i implementat**: la majoria de protocols d’Internet (HTTP, SMTP, FTP, DNS...) estan basats en TCP/IP.  
+- És **més simple**: només quatre capes, però cobreixen les mateixes funcions essencials.  
+- És **l’estàndard d’Internet**: utilitzat per tots els dispositius connectats avui en dia.
+
+En resum, podem dir que el **model OSI serveix per aprendre i comprendre** com funcionen les xarxes, mentre que el **model TCP/IP és el que s’utilitza realment** en el món pràctic.
