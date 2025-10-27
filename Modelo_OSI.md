@@ -57,7 +57,7 @@ Aquesta organització facilita la **compatibilitat entre dispositius i protocols
 
 <br>
 
-# 4. Explicació narrativa capa per capa
+# 4. Explicació capa per capa
 
 A continuació veurem cadascuna de les set capes del model OSI explicades de manera senzilla, amb exemples i analogies que t’ajudaran a entendre què fa cadascuna.
 
@@ -69,9 +69,6 @@ A continuació veurem cadascuna de les set capes del model OSI explicades de man
 
 **Exemple:**  
 Quan obres una pàgina web amb el navegador, és aquesta capa la que s’encarrega de demanar la informació al servidor web.  
-
-**Analogia:**  
-És com el **cambrer** que rep la teva comanda en un restaurant: tu (usuari) no parles amb la cuina (les capes inferiors), sinó amb ell.  
 
 **Protocols o dispositius:**  
 HTTP, HTTPS, FTP, SMTP, DNS.
@@ -85,9 +82,6 @@ S’encarrega de **traduir, xifrar o comprimir** les dades perquè la informaci�
 **Exemple:**  
 Quan reprodueixes un vídeo, aquesta capa s’encarrega de descomprimir el fitxer perquè puguis veure’l correctament.  
 
-**Analogia:**  
-És com un **traductor** que adapta el llenguatge perquè dues persones que parlen idiomes diferents es puguin entendre.  
-
 **Protocols o formats:**  
 SSL/TLS (xifratge), formats JPEG, MPEG, MP3, GIF.
 
@@ -99,9 +93,6 @@ Controla quan comença i acaba la comunicació entre dos dispositius. Pot reinic
 
 **Exemple:**  
 Quan et connectes a una videotrucada, aquesta capa manté la sessió oberta mentre dura la conversa.  
-
-**Analogia:**  
-És com un **moderador** que obre el torn de paraules, assegura que la conversa flueixi i la tanca quan acaba.  
 
 **Protocols:**  
 NetBIOS, RPC, sockets.
@@ -115,9 +106,6 @@ Garanteix que les dades arribin correctament i en l’ordre correcte. Divideix l
 **Exemple:**  
 Quan descarregues un fitxer gran, aquesta capa s’encarrega que totes les parts arribin bé i es tornin a ordenar.  
 
-**Analogia:**  
-És com una **empresa de missatgeria** que divideix un paquet gran en caixes més petites i comprova que totes arribin al destí.  
-
 **Protocols:**  
 TCP (fiable), UDP (ràpid però sense control d’errors).
 
@@ -129,9 +117,6 @@ Decideix **per on** han de viatjar els paquets de dades fins arribar al seu dest
 
 **Exemple:**  
 Quan envies un correu a algú d’un altre país, aquesta capa tria la millor “ruta” per fer arribar la informació.  
-
-**Analogia:**  
-És com un **GPS** que calcula el camí més eficient perquè un missatge arribi al seu destinatari.  
 
 **Protocols i dispositius:**  
 IP, ICMP, IPsec, routers.
@@ -145,9 +130,6 @@ Organitza les dades en trames i les envia a través d’un mitjà físic. També
 **Exemple:**  
 Quan un ordinador envia dades dins d’una xarxa local, aquesta capa s’assegura que arriben al dispositiu correcte segons la seva adreça MAC.  
 
-**Analogia:**  
-És com el **carter del barri**, que sap exactament a quin pis i porta ha de deixar cada carta.  
-
 **Protocols i dispositius:**  
 Ethernet, Wi-Fi, commutadors (switch).
 
@@ -159,9 +141,6 @@ Transmet els bits (0 i 1) com a senyals elèctrics, òptics o de ràdio a travé
 
 **Exemple:**  
 Quan envies un missatge per WhatsApp, finalment la informació es converteix en impulsos elèctrics o ones que viatgen pel cable o per Wi-Fi.  
-
-**Analogia:**  
-És com la **carretera** per on circulen els vehicles (les dades). Sense ella, res no podria moure’s.  
 
 **Dispositius:**  
 Cables, connectors, repetidors, hubs, targetes de xarxa (NIC).
@@ -214,6 +193,8 @@ Cada tipus de dispositiu implementa només aquelles capes que necessita per real
 💡 **Recorda:**  
 Com més amunt treballa un dispositiu dins del model OSI, **més “intel·ligent”** és, ja que pot entendre més informació sobre el contingut i la destinació de les dades.
 
+<br>
+
 # 7. El model TCP/IP
 
 ## Introducció històrica
@@ -228,6 +209,7 @@ Tot i que el model OSI és molt útil per entendre com funciona una xarxa, **Int
   <div style="text-align: center;">
     <img src="https://github.com/victordomgs/M0225/blob/main/images/Image10.png" width="550" height="auto"/>
   </div>
+
 
 ## Correspondència entre el model OSI i el model TCP/IP
 
