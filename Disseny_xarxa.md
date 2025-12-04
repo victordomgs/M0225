@@ -107,4 +107,22 @@ switchport trunk allowed vlan 10,20,30,40,99
 ```
 
 > [!NOTE]  
-> Un trunk és un tipus d’enllaç entre dispositius de xarxa (normalment entre switches, o entre un switch i un router) que  permet transportar diverses VLANs alhora per un mateix cable. En lloc de tenir un cable per a cada VLAN, el trunk encapsula els marcs Ethernet afegint-hi una etiqueta (tag 802.1Q) que indica a quina VLAN pertany cada trama. Així, múltiples xarxes virtuals poden circular per un sol enllaç físic de manera separada i segura. Els trunks són essencials en xarxes on un switch central distribueix trànsit a diferents plantes, on es connecta a un router per fer router-on-a-stick, o quan es vol mantenir el trànsit de VLANs consistent a través de la infraestructura de commutació.
+> Un **trunk** és un tipus d’enllaç entre dispositius de xarxa (normalment entre switches, o entre un switch i un router) que  permet transportar **diverses VLANs alhora per un mateix cable**. En lloc de tenir un cable per a cada VLAN, el trunk encapsula els marcs Ethernet afegint-hi una etiqueta (tag 802.1Q) que indica a quina VLAN pertany cada trama. Així, múltiples xarxes virtuals poden circular per un sol enllaç físic de manera separada i segura. 
+
+Ara, configurem *trunk* cap als switches de planta. Assumint que els ports són Fa0/2, Fa0/3 i Fa0/4: 
+
+```go
+interface range fa0/2 - 4
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,99
+```
+
+Finalment, assignem VLAN 40 als ports servidors:
+
+```pgsql
+interface range fa0/10 - 13
+switchport mode access
+switchport access vlan 40
+```
+
+#### 2. Configurem el router-on-a-stick
