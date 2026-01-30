@@ -27,12 +27,8 @@ En aquest procés es produeixen dos fenòmens en el procés d'encapsulació de l
 
 ## Classe de IP
 
-  <div style="text-align: center;">
-    <img src="https://ca.wikipedia.org/wiki/Adre%C3%A7a_IP#/media/Fitxer:IP_Address_Match.png" width="550" height="auto"/>
-  </div>
-
 
 
   <div style="text-align: center;">
-    <img src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.06.56%20p.m.-207132c7-4201-4ed4-a6b7-8344a3f91d2f.jpg" width="550" height="auto"/>
+    <img src="https://static.platzi.com/media/user_upload/Captura%20de%20Pantalla%202022-01-26%20a%20la%28s%29%207.06.56%20p.m.-207132c7-4201-4ed4-a6b7-8344a3f91d2f.jpg" width="750" height="auto"/>
   </div>
