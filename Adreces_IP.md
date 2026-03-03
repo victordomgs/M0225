@@ -1,31 +1,12 @@
-# Adreces IP
+# Protocol IP
 
-<br>
+El **Protocol d'Internet (IP)** és el protocol de comunicacions de la **capa de xarxa** de la suite de protocols d'Internet per transmetre **datagrames** a través de les fronteres de la xarxa. La seva funció d'**encaminament** (routing) permet la interconnexió de xarxes i, essencialment, estableix el que coneixem com a Internet.
 
-D'acord amb el protocol d'Internet, una **adreça IP**és un número que identifica inequívocament un dispositiu lògic connectat a la xarxa. Dins d'una mateixa xarxa, cada adreça IP que s'utilitzi ha de ser única.
-
-Una adreça IP es representa mitjançant un nombre binari de 32 (IPv4) o 128 bits (IPv6). Les adreces IPv4 s'expressen com nombres de notació decimal: es divideixen els 32 bits de l'adreça en quatre octets 
-(un octet és un grup de 8 bits). El valor decimal màxim de cada octet és 255 (el nombre binari de 8 bits més alt és 11111111, i aquests bits, de dreta a esquerra, tenen valors decimals d'1, 2, 4, 8, 16, 32, 64 i 128,
-la suma dels quals és 255). Un exemple d'adreça IP podria ser 192.168.1.123. Aquest és un exemple típic d'IP en xarxa local.
-
-## Transmissió de dades
-
-Com ja sabem de l'anterior BA, la transmissió de dades és el transport de qualsevol tipus d'informació, d'un lloc a un altre per mitjans físics.
-
-Les dades es transmeten gràcies a un procés anomenat **encapsulació**. L'encapsulació és un mètode de disseny modular de protocols de comunicació en el qual les funcions lògiques d'una xarxa són abstretes ocultant informació a les capes de nivell superior.
-
-En aquest procés es produeixen dos fenòmens en el procés d'encapsulació de les dades:
-
-- **Segmentació:** és el procés de dividir un paquet de dades en unitats més petites per a la seva transmissió a través de la xarxa. La segmentació de paquets ocorre en la capa quatre del model OSI; la capa de transport.
-- **Multiplexació:** és la combinació de dos o més canals d'informació en un sol medi de transmissió fent servir un dispositiu anomenat multiplexor.
+L'IP té la tasca de lliurar **paquets** des de l'**amfitrió** (*host*) d'origen fins a l'amfitrió de destinació basant-se únicament en les **adreces IP** que figuren a les **capçaleres** dels paquets. Amb aquesta finalitat, l'IP defineix estructures de paquets que **encapsulen** les dades que s'han de lliurar. També defineix els mètodes d'adreçament que s'utilitzen per etiquetar el datagrama amb la informació d'origen i de destinació.
 
   <div style="text-align: center;">
     <img src="https://github.com/victordomgs/M0225/blob/main/images/Image12.jpg" width="450" height="auto"/>
   </div>
-
-<br>
-
-## Classe de IP
 
 
 
