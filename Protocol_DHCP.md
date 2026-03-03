@@ -71,7 +71,7 @@ A més, existeix un **indicador de difusió** (*BROADCAST flag*), que és 1 bit 
 Normalment, el `DHCPOFFER` s'envia mitjançant unicast. Per a aquells equips (*hosts*) que no poden acceptar paquets unicast abans de tenir configurades les adreces IP, aquest indicador es pot utilitzar per solucionar el problema.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image13.png" width="400" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image13.png" width="350" height="auto"/>
   </div>
 
 ---
