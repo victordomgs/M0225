@@ -48,7 +48,7 @@ Depenent de la implementació, el servidor DHCP pot utilitzar tres mètodes per 
 
 ---
 
-## El Model de Servei i el Procés DORA
+## El Model de Servei
 
 El DHCP utilitza un model de servei **sense connexió** basat en el **Protocol de Datagrames d'Usuari** (UDP). Per a les seves operacions, s'implementa amb dos números de port UDP que són els mateixos que s'utilitzaven en el protocol d'arrencada (BOOTP):
 
@@ -71,5 +71,33 @@ A més, existeix un **indicador de difusió** (*BROADCAST flag*), que és 1 bit 
 Normalment, el `DHCPOFFER` s'envia mitjançant unicast. Per a aquells equips (*hosts*) que no poden acceptar paquets unicast abans de tenir configurades les adreces IP, aquest indicador es pot utilitzar per solucionar el problema.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image13.png" width="450" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image13.png" width="400" height="auto"/>
   </div>
+
+---
+
+## Procés DORA
+
+El protocol es desenvolupa mitjançant un intercanvi de missatges en quatre passos fonamentals:
+
+### 1. Descobriment (Discovery)
+
+El client DHCP emet un missatge *DHCPDISCOVER* per tota la subxarxa de la xarxa, utilitzant l'adreça de destinació `255.255.255.255` (difusió limitada) o l'adreça de difusió específica de la subxarxa (difusió dirigida). En aquest missatge, el client també pot sol·licitar una adreça IP específica, que el servidor pot tenir en compte a l'hora de decidir quina adreça oferir.
+
+### 2. Oferta (Offer)
+
+Quan un servidor DHCP rep un missatge *DHCPDISCOVER*, reserva una adreça IP per al client i li envia una oferta de concessió mitjançant un missatge *DHCPOFFER*. Aquest missatge inclou:
+
+- L'ID de client (opció 61, normalment l'adreça MAC).
+- L'adreça IP que s'ofereix.
+- La màscara de subxarxa.
+- La durada de la concessió (lease duration).
+- L'adreça IP del servidor DHCP que fa l'oferta.
+
+### 3. Sol·licitud (Request)
+
+En resposta a l'oferta rebuda, el client contesta amb un missatge *DHCPREQUEST*, enviat per difusió al servidor, sol·licitant formalment l'adreça que se li ha ofert. Encara que un client pot rebre ofertes de múltiples servidors (si n'hi ha més d'un a la xarxa), només n'acceptarà una.
+
+### 4. Reconeixement (Acknowledgement)
+
+Quan el servidor DHCP rep el *DHCPREQUEST*, el procés de configuració entra en la fase final. El servidor envia un paquet DHCPACK al client. Aquest paquet conté la durada definitiva de la concessió i qualsevol altra informació de configuració sol·licitada pel client. Un cop el client rep aquest paquet, la seva configuració IP està completada.
