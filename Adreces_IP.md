@@ -39,6 +39,6 @@ Existeixen quatre mètodes principals d'adreçament en el Protocol d'Internet:
 - **Anycast:** Lliura un missatge a qualsevol node d'un grup, normalment al més proper a l'origen, mitjançant una associació **d'un a un d'entre molts**. Els datagrames s'encaminen a un sol membre d'un grup de receptors potencials que estan tots identificats per la mateixa adreça de destinació. L'algoritme d'encaminament selecciona el receptor únic del grup basant-se en quin és el més proper segons alguna mesura de distància o de cost.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image15.jpg" width="250" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image15.jpg" width="150" height="auto"/>
   </div>
 
