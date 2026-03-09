@@ -35,7 +35,7 @@ En realitzar una petició que requereix una cerca de DNS, aquesta s'envia al ser
 La majoria d'usuaris domèstics utilitzen el servidor proporcionat pel seu proveïdor, tret d'aquells que personalitzen els seus equips o encaminadors (routers) per a servidors públics determinats. La configuració d'aquests servidors pot ser **manual o automàtica** mitjançant el protocol **DHCP** (IP dinàmica). En altres casos, els administradors de xarxa tenen configurats els seus propis servidors DNS.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image16.png" width="650" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image16.png" width="750" height="auto"/>
   </div>
 
 En qualsevol cas, els servidors DNS que reben la petició busquen primer si disposen de la resposta a la seva memòria cau. Si és així, serveixen la resposta; en cas contrari, iniciarien la **cerca de manera recursiva**. Una vegada trobada la resposta, el servidor DNS desarà el resultat a la seva memòria cau per a usos futurs i retornarà el resultat al client.
