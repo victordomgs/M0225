@@ -59,10 +59,10 @@ L'espai de noms de domini té una estructura arborescent. Les fulles i els nodes
 
 Les etiquetes són cadenes alfanumèriques (amb l'ús del guionet «-» com a únic símbol permès), han de tenir almenys un caràcter i un màxim de 63 caràcters de longitud, i han de començar amb una lletra (mai amb un guionet).
 
-- Format: Les etiquetes individuals estan separades per punts.
-- FQDN: Un nom de domini correctament format (**FQDN**, per les seves sigles en anglès) acaba amb un punt, per exemple: `www.exemple.com` (tot i que aquest últim punt normalment s'omet per ser purament formal).
-- Longitud: Un nom de domini ha d'incloure tots els punts i té una longitud màxima de 255 caràcters.
-- Jerarquia: Es llegeix sempre de dreta a esquerra. El punt de l'extrem dret separa l'etiqueta arrel de la jerarquia. Aquest primer nivell es coneix com a domini de nivell superior (**TLD**, per les seves sigles en anglès).
+- **Format:** Les etiquetes individuals estan separades per punts.
+- **FQDN:** Un nom de domini correctament format (**FQDN**, per les seves sigles en anglès) acaba amb un punt, per exemple: `www.exemple.com` (tot i que aquest últim punt normalment s'omet per ser purament formal).
+- **Longitud:** Un nom de domini ha d'incloure tots els punts i té una longitud màxima de 255 caràcters.
+- **Jerarquia:** Es llegeix sempre de dreta a esquerra. El punt de l'extrem dret separa l'etiqueta arrel de la jerarquia. Aquest primer nivell es coneix com a domini de nivell superior (**TLD**, per les seves sigles en anglès).
 
 Els objectes d'un domini DNS (com el nom d'un equip) es registren en un fitxer de zona, ubicat en un o més servidors de noms.
 
