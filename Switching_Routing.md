@@ -160,7 +160,7 @@ Quan les VLANs s'han d'estendre a través de diversos commutadors, s'utilitza un
 - **Utilitat:** Permet que un usuari de la "VLAN 1" a la planta 1 es comuniqui amb un altre usuari de la "VLAN 1" a la planta 2, sense que aquest trànsit es barregi amb el d'altres xarxes virtuals.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image22.gif" width="450" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image22.gif" width="550" height="auto"/>
   </div>
 
 #### El Router Linksys WRT-54GL
