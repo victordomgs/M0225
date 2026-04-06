@@ -27,7 +27,7 @@ Un encaminador funciona, en essència, com un ordinador especialitzat i comparte
 - **ROM:** Conté el programari de diagnòstic i les instruccions d'arrencada bàsiques.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image19.png" width="450" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image19.png" width="600" height="auto"/>
   </div>
 
 ### Interfícies i connexions físiques
@@ -40,7 +40,7 @@ A la part posterior dels dispositius trobem els punts de connexió amb el món e
 - **Port de Consola:** Port especial (normalment de color blau) per a la configuració inicial del dispositiu mitjançant un ordinador i un cable de consola.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image20.png" width="450" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Image20.png" width="600" height="auto"/>
   </div>
 
 ## El Commutador (Switch)
