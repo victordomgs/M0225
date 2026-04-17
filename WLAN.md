@@ -27,7 +27,7 @@ Per optimitzar una xarxa sense fil, cal comprendre com viatgen les dades i quins
 - **Interferències:** Degradació del senyal causada per altres xarxes WiFi o aparells electrònics (com microones o Bluetooth) que operen en les mateixes freqüències.
 
   <div style="text-align: center;">
-    <img src="https://en.wikipedia.org/wiki/Wireless_LAN#/media/File:Roaming01.svg" width="450" height="auto"/>
+    <img src="https://commons.wikimedia.org/wiki/File:Roaming01.png" width="450" height="auto"/>
   </div>
 
 ### C. Gestió de l'Espectre: Canals
