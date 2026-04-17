@@ -76,7 +76,4 @@ Encara que sovint s'utilitzen com a sinònims, tenen funcions diferents:
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Linksys_WAP54G.JPG" width="550" height="auto"/>
   </div>
 
-## Seguretat en xarxes WIFI
-
-
 
