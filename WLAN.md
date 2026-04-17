@@ -5,7 +5,7 @@
 Les xarxes sense fil (Wireless Local Area Network) es basen en la transmissió de dades mitjançant **ones electromagnètiques**, eliminant la dependència de la infraestructura física de cablejat.
 
   <div style="text-align: center;">
-    <img src="https://github.com/victordomgs/M0225/blob/main/images/Figura%2023.png" width="450" height="auto"/>
+    <img src="https://github.com/victordomgs/M0225/blob/main/images/Figura%2023.png" width="650" height="auto"/>
   </div>
 
 ### A. L'Estàndard IEEE 802.11
@@ -17,6 +17,10 @@ Totes les xarxes WiFi operen sota l'estàndard **IEEE 802.11**, que ha evolucion
 - **802.11n (WiFi 4):** Introdueix la tecnologia MIMO (múltiples antenes) i pot operar en 2.4 GHz i 5 GHz.
 - **802.11ac (WiFi 5):** Centrat en la banda de 5 GHz per oferir velocitats de gigabit.
 
+  <div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/WLAN_PCI_Card_cleaned.png" width="550" height="auto"/>
+  </div>
+
 ### B. Conceptes de Rendiment i Senyal
 
 Per optimitzar una xarxa sense fil, cal comprendre com viatgen les dades i quins factors les frenen:
@@ -27,7 +31,7 @@ Per optimitzar una xarxa sense fil, cal comprendre com viatgen les dades i quins
 - **Interferències:** Degradació del senyal causada per altres xarxes WiFi o aparells electrònics (com microones o Bluetooth) que operen en les mateixes freqüències.
 
   <div style="text-align: center;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Roaming01.png" width="450" height="auto"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Roaming01.png" width="650" height="auto"/>
   </div>
 
 ### C. Gestió de l'Espectre: Canals
@@ -36,23 +40,41 @@ Les bandes de freqüència es divideixen en canals per permetre que múltiples x
 
 A la banda de 2.4 GHz, els canals se solapen entre ells. Es recomana utilitzar els canals 1, 6 i 11 perquè són els únics que no tenen interferències mútues.
 
-### D. Identificació de la Xarxa
-
-- **SSID (Service Set Identifier):** És el nom públic de la xarxa que veuen els usuaris.
-- **BSSID:** És l'adreça física (MAC) de la ràdio del punt d'accés que està servint la xarxa.
-- **ESSID:** S'utilitza quan diversos punts d'accés comparteixen el mateix SSID per cobrir una àrea gran, permetent el roaming de l'usuari.
-
-### E. Mecanismes d'Accés i Control
-
-- **Beacon Interval:** El temps entre les ràfegues de senyal que el router envia per anunciar la seva presència als clients.
-- **RTS/Fragmentation Threshold:** Paràmetres avançats que ajuden a gestionar col·lisions de dades en entorns amb molts obstacles o molta càrrega de trànsit.
+- **Banda de 2.4 GHz:** Té un abast més gran però està més saturada. Els canals se solapen entre ells; per això es recomana utilitzar els canals 1, 6 o 11, ja que són els únics que no s'interfereixen mútuament.
+- **Banda de 5 GHz:** Ofereix més velocitat i menys interferències, però té menys capacitat per travessar parets.
+- **Auto-tuning:** Funció que permet al router triar automàticament el canal menys congestionat del seu entorn.
 
 ## Identificació i estructura de la xarxa
 
+Perquè una xarxa sense fil funcioni correctament, cal que estigui clarament identificada i que els seus paràmetres tècnics estiguin configurats per evitar col·lisions amb altres xarxes veïnes.
+
+### A. L'SSID (Service Set Identifier)
+
+L'**SSID** és el nom de la xarxa sense fil que es visualitza quan busquem xarxes disponibles des d'un dispositiu.
+
+- **Funció:** Permet als usuaris identificar a quina xarxa s'estan connectant.
+- **SSID Predeterminat:** És recomanable modificar el nom que ve de fàbrica (com "Linksys") per evitar que possibles atacants identifiquin el model de router i les seves vulnerabilitats conegudes.
+- **SSID Broadcast:** Es pot desactivar la difusió del nom de la xarxa perquè no aparegui automàticament a la llista d'escaneig, obligant a l'usuari a introduir el nom manualment.
+
+  <div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Hotspot-accesspoint-multiple-ssid-vlan-1400.gif" width="650" height="auto"/>
+  </div>
 
 ## Dispositius i modes de funcionament
 
+Per desplegar una xarxa sense fil, és essencial distingir entre el dispositiu físic i el rol que aquest exerceix dins de la topologia de xarxa.
 
+### A. El Router i el Punt d'Accés (AP)
+
+Encara que sovint s'utilitzen com a sinònims, tenen funcions diferents:
+
+- **Punt d'Accés (AP):** És el dispositiu que permet que equips sense fil es connectin a una xarxa cablejada mitjançant antenes externes que proporcionen cobertura.
+- **Router Wireless:** És un dispositiu híbrid que combina les funcions d'un encaminador (connexió entre xarxes, com Internet i la LAN) i les d'un punt d'accés WiFi.
+- **Antenes:** El model Linksys utilitzat disposa de dues antenes externes per optimitzar la recepció i emissió de senyals.
+
+  <div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Linksys_WAP54G.JPG" width="550" height="auto"/>
+  </div>
 
 ## Seguretat en xarxes WIFI
 
