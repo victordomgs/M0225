@@ -165,5 +165,83 @@ Quan les VLANs s'han d'estendre a través de diversos commutadors, s'utilitza un
 
 #### El Router Linksys WRT-54GL
 
-- El router Linksys té un switch intern de 5 ports.
+- El router Linksys té un switch intern de **5 ports**.
 - **VLAN de port d'Internet:** El port WAN (Internet) està físicament en el mateix switch però configurat en una **VLAN diferent** per aïllar la xarxa externa de la interna.
+
+## 4. Configuració de routers punt a punt
+
+### Configuració d'un router punt a punt (CLI)
+
+Per connectar dos encaminadors directament, s'utilitzen habitualment interfícies **serials** o **Fast Ethernet**. La configuració es realitza mitjançant la línia de comandes (CLI).
+
+#### Passos principals de configuració:
+1. **Accés al mode privilegiat:** Es fa servir la comanda `enable`.
+2. **Mode de configuració global:** `configure terminal`.
+3. **Selecció de la interfície:** Per exemple, `interface fastethernet 0/0` o `interface serial 0/0`.
+4. **Assignació d'IP i màscara:** `ip address [adreça_IP] [màscara]`.
+5. **Activació de la interfície:** Per defecte les interfícies estan apagades; cal executar `no shutdown` per activar-les.
+6. **Configuració del rellotge (només en Serials DCE):** S'utilitza `clock rate 1000000` per sincronitzar la transmissió.
+7. **Desament de la configuració:** És crucial executar `copy running-config startup-config` perquè els canvis es mantinguin després d'un reinici.
+
+### El Protocol d'Encaminament Dinàmic: RIP
+
+L'encaminament dinàmic permet que els routers aprenguin les rutes de la xarxa per si mateixos, sent més flexibles als canvis, tot i que consumeixen més recursos que l'estàtic.
+
+#### Característiques del RIP (Routing Information Protocol):
+
+- **Tipus:** És un protocol de tipus vector-distància.  
+- **Mètrica:** Calcula la millor ruta basant-se en el còmput de salts (hops) fins a arribar a la xarxa de destí.  
+- **Funcionament:** Cada router comunica a les seves xarxes veïnes quines xarxes "coneix".
+
+#### Comandes per configurar RIP:
+
+Per activar aquest protocol i que el router comenci a anunciar les seves xarxes, s'utilitzen les següents comandes:
+
+- `router rip`: Entra en el mode de configuració del protocol.  
+- `network [adreça_de_xarxa]`: Indica quines xarxes directament connectades s'han d'incloure en el procés d'encaminament.  
+
+> [!NOTE]
+> Si vols deixar de compartir una xarxa, s'utilitza la variant `no network [adreça_IP]`. Per verificar quines rutes ha après el router, es fa servir show ip route.
+
+## 5. Configuració d'una xarxa WLAN
+
+### Fonaments teòrics
+
+- **Estàndards IEEE 802.11:** Diferències entre les versions **g, n, ac i ax** en termes de velocitat, freqüència i abast.  
+- **Identificadors:** Definició de **SSID, ESSID i BSSID**.  
+- **Seguretat:** Anàlisi dels mètodes d'encriptació (**WEP, WPA, WPA2, WPA3**) i el filtratge per adreça **MAC**.  
+- **Rendiment:** Conceptes com interferències, canals recomanables en la banda de **2.4 GHz**, i paràmetres avançats com el beacon interval o el Tx Power.
+
+### Configuració a Packet Tracer
+
+**Segmentació amb VLANs i Subinterfícies:** Quan utilitzem un router central (com el 2621XM) per gestionar diferents xarxes, hem de configurar subinterfícies (per exemple, G0/0.10) per a cada VLAN (VLAN 10, 20, 88).  
+
+**Configuració del Router Sense Fils (WRS):**
+- Internet Setup: Es pot configurar amb una IP Estàtica per connectar-se al switch de la xarxa troncal.
+- Network Setup: Cal definir l'adreça IP local del router i activar el servidor DHCP per assignar IPs automàticament als clients sense fils.
+
+**Seguretat Wireless:** 
+- SSID: És el nom de la xarxa. Es pot deshabilitar el "SSID Broadcast" (difusió) perquè la xarxa sigui oculta, obligant l'usuari a configurar el perfil manualment al PC.  
+- WPA2 Personal: Actualment és l'estàndard mínim recomanat. Requereix una contrasenya (Pre-Shared Key) i xifratge AES.
+
+### Configuració del Router Físic (Linksys WRT54GL)
+
+#### Gestió Inicial i Seguretat de l'Equip
+- **Reset a Factory Defaults:** Imprescindible per esborrar configuracions anteriors i entrar amb les credencials per defecte.
+- **Accés Web:** Normalment a través de l'IP `192.168.1.1`. El primer pas sempre ha de ser canviar la contrasenya d'administració del router.  
+
+#### Paràmetres del Punt d'Accés (AP)
+- **Wireless Mode:** El mode **AP** (Access Point) és el més comú, on el router rep internet per cable i el reparteix via WiFi.  
+- **Canals (Channels)**: A la banda de **2.4 GHz**, s'utilitzen canals de l'1 al 13. És vital triar canals que no s'encavalquin (habitualment 1, 6 o 11) per evitar interferències amb altres xarxes properes.  
+- **Filtratge MAC:** Mesura de seguretat addicional que permet crear una llista blanca d'adreces físiques. Només els dispositius amb la MAC registrada podran connectar-se, encara que sàpiguen la contrasenya.
+
+## 6. Configuració de l'enllaç troncal
+
+Quan tenim diverses VLANs repartides entre diferents switches, necessitem una manera de connectar aquests switches perquè totes les VLANs puguin passar d'un costat a l'altre.
+
+- **Mode Access:** Un port en mode accés només pot pertànyer a una VLAN (per a PCs, impressores, etc.).
+- **Mode Trunk:** Un port en mode trunk pot transportar el tràfic de totes les VLANs simultàniament a través d'un sol cable físic.
+
+### Protocol IEEE 802.1Q (Dot1Q)
+
+És el protocol estàndard d'encapsulament per a trunks. La seva funció és afegir una etiqueta **(tag)** a la trama Ethernet original. Aquesta etiqueta inclou el **VLAN ID**, permetent que el switch receptor sàpiga exactament a quina VLAN pertany cada paquet.
